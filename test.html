@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+        <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];
+        
+            var myConfig = {
+                type: "bar",
+                plot:{
+                    stacked:true,
+                    stackType:"normal"
+                },
+                scaleY:{
+                    minValue:0,
+                    maxValue:50000
+                },
+                scaleX:{
+                    labels:
+                    ["2015","2020","2025","2030","2035","2040"]
+
+                },
+                series: [
+                    {
+                        values:[7775.90,7911.80,8129.60,8082.20,7917.80,7726.20]
+                    },
+                    {
+                        values:[21589.10,23427.90,24684.90,25896.80,26944.40,27765.30]
+                    },
+                    {
+                        values:[1821.5,2442.8,3207.9,4083.4,5016.9,6011.8]
+                    }
+                ]
+            };
+
+            zingchart.render({ 
+                id : 'myChart', 
+                data : myConfig, 
+                height: "100%", 
+                width: "100%" 
+            });
+        </script></head>
+    <body>
+        <div id='myChart'></div>
+
+    </body>
+</html>
